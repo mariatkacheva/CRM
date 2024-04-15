@@ -1,0 +1,71 @@
+﻿@page
+@model LDanceCRMRazorPages3.Pages.RegisterModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+
+        <div class="col-sm-12 col-md-12 col-lg-4">
+
+            <h1 class="mb-3">Регистрация</h1>
+
+            <form method="post">
+
+                @*список всех ошибок ввода*@
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.ClientSurname">Фамилия:</label>
+                    <input type="text" asp-for="Model.ClientSurname" class="form-control" />
+                    <span asp-validation-for="Model.ClientSurname" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.ClientName">Имя:</label>
+                    <input type="text" asp-for="Model.ClientName" class="form-control" />
+                    <span asp-validation-for="Model.ClientName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.ClientMiddleName">Отчество:</label>
+                    <input type="text" asp-for="Model.ClientMiddleName" class="form-control" />
+                    <span asp-validation-for="Model.ClientMiddleName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.ClientBirthDate">Дата рождения:</label>
+                    <input type="date" asp-for="Model.ClientBirthDate" class="form-control" />
+                    <span asp-validation-for="Model.ClientBirthDate" class="text-danger"></span>
+                </div>
+
+
+                @*поля ввода в бд - данные авторизации*@
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.Phone">Номер телефона:</label>
+                    <input type="text" asp-for="Model.Phone" class="form-control" />
+                    <span asp-validation-for="Model.Phone" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.Password">Пароль:</label>
+                    <input type="password" asp-for="Model.Password" class="form-control" />
+                    <span asp-validation-for="Model.Password" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.ConfirmPassword">Подтвердите пароль:</label>
+                    <input type="password" asp-for="Model.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="Model.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Создать аккаунт</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

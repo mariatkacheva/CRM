@@ -1,0 +1,81 @@
+﻿@page
+@model LDanceCRMRazorPages3.Pages.PassTypesModel
+@{
+}
+
+<br />
+<h2>Виды абонементов</h2>
+
+@* поиск *@
+<div style="margin-top: 10px;">
+    <form method="get">
+        <div class="input-group mb-3" style="width: 50%;">
+            <input type="text" class="form-control" name="searchString" placeholder="Введите название абонемента или тренировки..." value="@Model.SearchString">
+            <div class="input-group-append" style="margin-left: 10px;">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a class="btn btn-secondary btn-custom" href="/PassTypes">
+                    <i class="fas fa-sync-alt"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@*всплывающее сообщение "Нет записей!"*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="row mb-3 mt-3">
+        <div class="col-sm-9">
+            <div class="alert alert-info  alert-dismissible fade show" role="alert">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    @*таблица видов абонементов*@
+    <table class="table">
+        <thead>
+            <tr>
+                @*th - ячейки заголовка таблицы*@
+                <th>Тренировка</th>
+                <th>Количество посещений</th>
+                <th>Стоимость (руб.)</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.passtypesList)
+            {
+                <tr>
+                    @*td - ячейки таблицы*@
+                    <td>@item.TrainingName</td>
+                    <td>@item.PassTypeNumberOfVisits</td>
+                    <td>@item.PassTypePrice</td>
+                    @*кнопки*@
+                    @if(item.isSold)
+                    {
+                        <td class="custom-btn-cell">
+                            <a class="btn btn-success-custom btn-sm w-100">
+                                <i class="fas fa-check"></i> Абонемент активен
+                            </a>
+                        </td>
+
+                    }
+                    else
+                    {
+                        <td class="custom-btn-cell-yellow">
+                            <a class="btn btn-primary btn-sm w-100 custom-bg-color" href="/PassTypeBuy?searchString=@Model.SearchString&amp;PassTypeID=@item.PassTypeID">
+                                <i class="fas fa-money-bill"></i> Купить абонемент
+                            </a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

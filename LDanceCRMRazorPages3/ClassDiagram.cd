@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LDanceCRMRazorPages3.Pages.UserProfileModel">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAQAAAAAAAAAAAAAAAAQAABQAAAAAAAA=</HashCode>
+      <FileName>Pages\UserProfile.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.LoginModel">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAwEAAAAAAA=</HashCode>
+      <FileName>Pages\Login.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.LogoutModel">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAACA=</HashCode>
+      <FileName>Pages\Logout.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.RegisterModel">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAABwEAAAAAAA=</HashCode>
+      <FileName>Pages\Register.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.IndexModel">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAIAAAQAAAEAAAAIAIgAAAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Pages\Index.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.VisitInfo" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAEAAAAAAAAAAIAAjAAAAAAAAAACAgAA=</HashCode>
+      <FileName>Pages\Index.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassesModel">
+    <Position X="2.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEAAAAAAQAAAAAAAAAAAAAAAAAEABQAACAEAAA=</HashCode>
+      <FileName>Pages\Passes.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassInfo" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>oAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Pages\Passes.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.TimetableModel">
+    <Position X="4.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAABQAAAAAAgA=</HashCode>
+      <FileName>Pages\Timetable.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.TimetableInfo" Collapsed="true">
+    <Position X="4.25" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAEkAAAAAAAAAAABAAAIAAjAAAAgAAAAQCBgAA=</HashCode>
+      <FileName>Pages\Timetable.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.TimetableBuyModel" Collapsed="true">
+    <Position X="4.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CACAAAEAAQAAAQAAAAAAAAAAAAAAAAAAABQAAACAAgA=</HashCode>
+      <FileName>Pages\TimetableBuy.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.TimetableCancelModel" Collapsed="true">
+    <Position X="4.25" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAQAAAEAAAAAAAAAAAAAAABQAAACAAgA=</HashCode>
+      <FileName>Pages\TimetableCancel.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.TimetableReserveModel" Collapsed="true">
+    <Position X="4.25" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAQAAAEAAAAAAAAAAAAAAABQAAACAAgA=</HashCode>
+      <FileName>Pages\TimetableReserve.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassProlongModel" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iACAAAEAAQAAAQAAAAAAAAAAAAAAAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Pages\PassProlong.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassTypesModel">
+    <Position X="6.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAQAAQAAAAAAAAAAAAAAAABQAACAAEAA=</HashCode>
+      <FileName>Pages\PassTypes.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassTypeInfo" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAEAAAAgAAAAAAAAAAAAAAAAAAAIAIAAAAhAAA=</HashCode>
+      <FileName>Pages\PassTypes.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PassTypeBuyModel" Collapsed="true">
+    <Position X="6.5" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>KACAAAEAAQAAAQAAAAAAAAAAAAAAAAAAABQAACAAAAA=</HashCode>
+      <FileName>Pages\PassTypeBuy.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LDanceCRMRazorPages3.Pages.PrivacyModel">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Privacy.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

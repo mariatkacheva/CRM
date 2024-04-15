@@ -1,0 +1,91 @@
+﻿@page
+@model LDanceCRMRazorPages3.Pages.TimetableBuyModel
+@{
+}
+
+@*всплывающее сообщение о невозможности онлайн-оплаты*@
+@if (!string.IsNullOrEmpty(Model.paymentErrorMessage))
+{
+    <script>
+        $(document).ready(function () {
+            // Определяем функцию для отображения всплывающего сообщения
+            function showNotification(message) {
+                // Создаем элемент сообщения
+                var notification = $('<div class="notification">' + message + '</div>');
+
+                // Стилизуем сообщение
+                notification.css({
+                    'position': 'fixed',
+                    'top': '50px',
+                    'right': '10px',
+                    'background-color': '#fcd642',
+                    'color': '#ffffff',
+                    'padding': '20px',
+                    'border-radius': '5px',
+                    'font-size': '15px',
+                    'z-index': '9999'
+                });
+
+                // Добавляем сообщение в тело документа
+                $('body').append(notification);
+
+                // Задаем таймер для автоматического скрытия сообщения через 5 секунд
+                setTimeout(function () {
+                    notification.fadeOut('slow', function () {
+                        $(this).remove();
+                    });
+                }, 2500);
+            }
+
+            //Вызов функции с сообщением
+            showNotification('В настоящий момент онлайн оплата недоступна.');
+        });
+    </script>
+}
+
+
+    <div class="text-center mb-3">
+        <h3>Для посещения этого занятия необходимо приобрести абонемент.</h3>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="mt-4">
+                    @*блок с информацией о подходящих абонементах*@
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="width: 50%;"><strong>Название:</strong></td>
+                                <td style="width: 50%;">@Model.passtypeInfo.PassTypeName</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Стоимость:</strong></td>
+                                <td>@Model.passtypeInfo.PassTypePrice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form method="post">
+    <div class="row mb-3">
+
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary btn-sm w-100 custom-bg-color"><i class="fas fa-money-bill"></i> Купить абонемент</button>
+        </div>
+
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary btn-sm" href="/Timetable?searchDate=@Model.SearchDate" role="button">Назад</a>
+        </div>
+
+    </div>
+    </form>
+    
+
+
+
+    
+

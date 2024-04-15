@@ -1,0 +1,238 @@
+﻿/*Основной заголовок*/
+.main-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .main-heading h2 {
+        margin-right: 10px;
+    }
+
+
+/*Жёлтый заголовок*/
+.yellow-heading {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+    .yellow-heading h4 {
+        margin-right: 10px;
+        margin-bottom: 0;
+        color: #ffcd0d;
+    }
+
+    .yellow-heading i {
+        color: #ffcd0d;
+        margin-bottom: 0;
+    }
+
+/*Зелёный заголовок*/
+.green-heading {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+    .green-heading h4 {
+        margin-right: 10px;
+        margin-bottom: 0;
+        color: #28bd76;
+    }
+
+    .green-heading i {
+        color: #28bd76;
+        margin-bottom: 0;
+    }
+
+/*Зеленая неактивная кнопка с галочкой*/
+.custom-btn-cell {
+    text-align: center; /* Выравнивание содержимого по центру */
+}
+
+    .custom-btn-cell a {
+        color: #ffffff; /* Цвет текста кнопки */
+    }
+
+        .custom-btn-cell a:hover {
+            text-decoration: none; /* Удаление подчеркивания при наведении */
+        }
+
+/*Жёлтая кнопка покупки*/
+.custom-btn-cell-yellow {
+    text-align: center; /* Центрирование содержимого в ячейке */
+}
+
+    .custom-btn-cell-yellow a {
+        color: #ffffff; /* Цвет текста кнопки */
+    }
+
+        .custom-btn-cell-yellow a:hover {
+            text-decoration: none; /* Удаление подчеркивания при наведении */
+        }
+
+
+/* Стили для контейнера сетки */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Стили для элементов сетки */
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+/* Стили для кнопок */
+.btn-custom {
+    background-color: #72d2a2;
+    color: white;
+    border-color: #72d2a2;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #72d2a2;
+    border-color: #72d2a2;
+}
+
+.btn-custom:hover {
+    background-color: #60c192;
+    border-color: #60c192;
+}
+
+.btn-custom:focus {
+    box-shadow: 0 0 0 0.2rem rgba(114, 210, 162, 0.5);
+    outline: none;
+}
+
+/* Стили для изображения в navbar */
+.navbar-brad img {
+    width: 200px !important;
+}
+
+/* Переопределение цвета кнопок с синими границами */
+.btn-primary {
+    background-color: #a879d8;
+    border-color: #a879d8;
+}
+
+    .btn-primary:hover {
+        background-color: #945fc5;
+        border-color: #945fc5;
+    }
+
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(168, 121, 216, 0.5);
+    }
+
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-primary:not(:disabled):not(.disabled):active {
+        background-color: #945fc5;
+        border-color: #945fc5;
+    }
+
+/* Стили для кнопок с фиолетовым фоном */
+.btn-outline-primary {
+    color: #a879d8;
+    border-color: #a879d8;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #a879d8;
+        color: #ffffff;
+    }
+
+    .btn-outline-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(168, 121, 216, 0.5);
+    }
+
+    .btn-outline-primary:not(:disabled):not(.disabled).active,
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #a879d8;
+        color: #ffffff;
+    }
+
+/* Стили для кнопок с желтым фоном */
+.custom-bg-color {
+    background-color: #ffcd0d;
+    border-color: #ffcd0d;
+}
+
+    .custom-bg-color:hover {
+        background-color: #ffbb00;
+        border-color: #ffbb00;
+    }
+
+/* Стили для слайдера с фото */
+.slider-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.slide {
+    display: inline-block;
+    width: calc(100% / 3);
+    vertical-align: top;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.spacer {
+    height: 100px;
+}
+
+/* Стили для зеленых кнопок */
+.btn-success-custom {
+    background-color: #28bd76;
+    border-color: #28bd76;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-success-custom:hover,
+    .btn-success-custom:focus {
+        background-color: #1e9e4f;
+        border-color: #1e9e4f;
+        color: #ffffff;
+    }
+
+    .btn-success-custom:active {
+        background-color: #127533;
+        border-color: #127533;
+        color: #ffffff;
+    }

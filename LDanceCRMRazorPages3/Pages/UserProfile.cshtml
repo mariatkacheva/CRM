@@ -1,0 +1,99 @@
+﻿@page
+@model LDanceCRMRazorPages3.Pages.UserProfileModel
+@{
+}
+<br />
+<h2>Мой профиль</h2>
+
+@*вывод сообщений об ошибке ввода*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+@*форма для обмена данных между пользователем и сервером*@
+<form method="post">
+
+    @*запоминаем id клиента*@
+    <input type="hidden" name="ClientID" value="@Model.clientInfo.ClientID" />
+
+    @*строки ввода данных клиента*@
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Фамилия</label>
+        <div>
+            @*объект value для заполнения старыми данными, если произошла ошибка ввода*@
+            <input type="text" class="form-control" name="ClientSurname" value="@Model.clientInfo.ClientSurname" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Имя</label>
+        <div>
+            <input type="text" class="form-control" name="ClientName" value="@Model.clientInfo.ClientName" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Отчество</label>
+        <div>
+            <input type="text" class="form-control" name="ClientMiddleName" value="@Model.clientInfo.ClientMiddleName" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Дата рождения</label>
+        <div>
+            <input type="date" class="form-control" name="ClientBirthDate" value="@Model.clientInfo.ClientBirthDate.ToString("yyyy-MM-dd")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Номер телефона</label>
+        <div>
+            <input type="text" class="form-control" name="ClientPhone" value="@Model.clientInfo.ClientPhone" />
+        </div>
+    </div>
+    
+    @*вывод сообщения об успешном вводе*@
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class="alert alert-success  alert-dismissible fade show" role="alert">
+                    <strong>@Model.successMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @*кнопка "Отправить"*@
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        </div>
+
+        
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="#" onclick="goBack()" role="button">Назад</a>
+        </div>
+
+        @*скрипт позволяет переводить на ту страницу, с которой мы пришли*@
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+    </div>
+
+</form>
+
+@if (!string.IsNullOrEmpty(Model.successMessage))
+{
+    TempData["EditMessage"] = Model.successMessage;
+}

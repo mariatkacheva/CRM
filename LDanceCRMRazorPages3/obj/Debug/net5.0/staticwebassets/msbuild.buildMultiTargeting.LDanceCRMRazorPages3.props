@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LDanceCRMRazorPages3.props" />
+</Project>
